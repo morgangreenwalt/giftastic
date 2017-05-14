@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+}
+
+p {
+	font-family: 'Open-sans', sans-serif;
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: #fff;
+	/*background-color: rgba(217, 237, 247, 0.4); */
+	position: relative;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	padding-top: 25px;
+    top: 30px;
+}
+
+.office-logo {
+	position: absolute;
+	text-align: center;
+	left: 300px;
+    top: -45px;
+    opacity: .3;
+}
+
+#intro {
+	padding-top: 40px;
+}
+
+.search {
+	margin-top: 30px;
+    padding-top: 50px;
+    text-align: center;
+}
