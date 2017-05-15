@@ -34,3 +34,23 @@ p {
     padding-top: 50px;
     text-align: center;
 }
+
+.gif-buttons {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-primary {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-family: 'Open-sans', sans-serif;
+	color: #000;
+	background-color: #fbce91;
+}
+
+.gif-images {
+	text-align: center;
+}
