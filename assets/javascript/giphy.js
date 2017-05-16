@@ -10,7 +10,7 @@ for (var i = 0; i < topics.length; i++) {
 
 $(".btn-primary").on("click", function(){
 //Variables defining Giphy API URL & user search term	
-	var currentBtn = $(this).attr("data-name");
+	var currentBtn = $(this).attr("name");
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ currentBtn +"&api_key=dc6zaTOxFJmzC&limit=10";
 	// var userSearch = $("#srch-term").val();
 
@@ -24,13 +24,13 @@ $(".btn-primary").on("click", function(){
 		var gif = results.data[0];	
 		var rating = gif.rating;
 		var still = gif.images.fixed_height_still.url;
-		var animate = gif.images.looping.mp4;
+		var animate = gif.images.fixed_height.url;
 		console.log(rating);	
 		console.log(gif);
 		console.log(still);
 		console.log(animate);
 
-		$()
+		$(".first-three-gifs").append("<div class='giftastic'> <p class='rating'> "+ rating +" </p> <img src='"+ animate +"'> </div>");
 	})
 
 });
