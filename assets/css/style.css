@@ -51,6 +51,28 @@ p {
 	background-color: #fbce91;
 }
 
+.input-group-btn {
+    left: 115px;
+    bottom: 34px;
+}
+
 .gif-images {
 	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.input-group {
+		display: initial;
+	}
+
+	.input-group-btn {
+		left: 0px;
+		bottom: 0px; 
+		padding-top: 10px;
+	}
+
+	.btn-primary {	
+	margin-top: 5px;
+    margin-bottom: 5px;
+	}
 }
