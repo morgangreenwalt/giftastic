@@ -31,14 +31,26 @@ function displayGiphy(){
 				var still = gif[i].images.fixed_height_still.url;
 				var animate = gif[i].images.fixed_height.url;
 
-				$(".first-three-gifs").prepend("<div class='col-md-4 giftastic'> <img src='"+ still +"'> <p class='rating'>Gif Rating:  "+ rating +" </p> </div>");
-				// $(".giftastic").on("click", function(){
-				// 	$(this).html("<div class='col-md-4 giftastic'> <img src='"+ animate +"'> </div>");
-				// });
+				$(".first-three-gifs").prepend("<div class='col-md-4 giftastic'> <img class='gif-state' data-still='"+ still +"' data-animate='"+ animate +"' data-state='still' src='"+ still +"'> <p class='rating'>Gif Rating:  "+ rating +" </p> </div>");
+				 // $("#gifsArea").prepend("<div class='col-md-2 text-center giftastic'>  <img class='giff' data-still='"+still+"' data-animate='"+animate+"' data-state='still' src='"+ still+"'> <p class='rating'>Rating:  "+ rating +" </p> </div>")
 			}
 		})
 
 	});
+}
+
+ function animateGif() {
+	var state = $(this).attr("data-state");
+
+	if (state === "still") {
+		$(this).attr("src", $(this).attr("data-animate"));
+		$(this).attr("data-state", "animate");
+	} 
+
+	else {
+		$(this).attr("src", $(this).attr("data-still"));
+		$(this).attr("data-state", "still");
+	}
 }
 
 //On click function to store user search term and run ajax call
@@ -50,11 +62,6 @@ $("#searchBtn").on("click", function(){
 });
 
 $(document).on("click", ".gif-buttons", displayGiphy);
-
-//Animate gifs on click
-// $(".giftastic").on("click", function(){
-// 	// var animate = gif.images.fixed_height.url;
-// 	$(".first-three-gifs").html("<img src='"+ animate +"'>");
-// });
+$(document).on("click", ".gif-state", animateGif);
 
 });
