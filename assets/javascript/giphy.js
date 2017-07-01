@@ -14,7 +14,7 @@ function displayGiphy(){
 	$(".btn-primary").on("click", function(){
 	//Variables defining Giphy API URL & user search term	
 		var currentBtn = $(this).attr("data-name");
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q="+currentBtn+"&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q="+currentBtn+"&api_key=dc6zaTOxFJmzC&limit=10";
 
 	//AJAX call to Giphy API	
 		$.ajax ({
